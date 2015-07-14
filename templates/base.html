@@ -1,1 +1,11 @@
-<p>meu pai?</p>
+{% for apoiador in apoiadores  %}
+	<p>{{apoiador}}</p>
+	<img src="{{apoiador.logo_thumbnail.url}}" alt="">
+
+{% endfor %}
+
+{% for palestrante in palestrantes  %}
+	<p>{{palestrante}}</p>
+	<img src="{{palestrante.avatar_thumbnail.url}}" alt="">
+
+{% endfor %}
