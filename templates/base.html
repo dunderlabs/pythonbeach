@@ -1,6 +1,6 @@
-{% for apoiador in apoiadores  %}
+<!-- {% for apoiador in apoiadores  %}
 	<p>{{apoiador}}</p>
-	<img src="{{apoiador.logo_thumbnail.url}}" alt="">
+	<img src="{{apoiador.thumbnail.url}}" alt="">
 
 {% endfor %}
 
@@ -9,3 +9,31 @@
 	<img src="{{palestrante.avatar_thumbnail.url}}" alt="">
 
 {% endfor %}
+
+-->
+{% load static %}
+
+<!DOCTYPE html>
+<html >
+  <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Python Beach III</title>
+  </head>
+<body>
+	<header>
+		<nav id="navigator">
+			<ul>
+				<li>INÍCIO</li>
+				<li>PALESTRANTES</li>
+				<li>PROGRAMAÇÃO</li>
+				<li>LOCAL</li>
+				<li>APOIO</li>
+			</ul>
+		</nav>
+	</header>
+	<section id="slider">
+		
+	</section>
+{% block content %} {% endblock content %}
+</body>
+</html>

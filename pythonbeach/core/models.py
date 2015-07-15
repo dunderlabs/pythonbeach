@@ -1,5 +1,5 @@
 from django.db import models
-from imagekit.models import ProcessedImageField
+from imagekit.models import ProcessedImageField, ImageSpecField
 from imagekit.processors import ResizeToFill
 
 
@@ -28,12 +28,15 @@ class Apoiador(models.Model):
         return 'apoiador/{}'.format(filename)
 
     nome = models.CharField('Apoiador', max_length=100)
-    logo_thumbnail = ProcessedImageField(
+    logo = models.ImageField(
         upload_to=image_path,
-        processors=[ResizeToFill(200, 200)],
+        blank=True
+    )
+    thumbnail = ImageSpecField(
+        source='logo',
+        processors=[ResizeToFill(400, 150)],
         format='JPEG',
         options={'quality': 60},
-        blank=True
     )
 
     def __str__(self):

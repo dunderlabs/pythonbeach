@@ -1,0 +1,19 @@
+/* Azul: #2D8AE2 */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+#navigator {
+	min-height: 70px;
+	text-align: center;
+	background-color: #2D8AE2;
+	color: #FFF;
+	font-size: 24px;
+}
+#navigator ul li {
+	display: inline-block;
+}
+#navigator ul {
+	line-height: 70px;
+}

@@ -4,7 +4,7 @@ from .models import Apoiador, Palestrante
 
 def index(request):
     context = {}
-    template_name = 'base.html'
+    template_name = 'core/index.html'
     apoiadores = Apoiador.objects.all()
     palestrantes = Palestrante.objects.all()
     context['apoiadores'] = apoiadores
